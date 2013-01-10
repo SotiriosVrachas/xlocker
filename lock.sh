@@ -60,5 +60,6 @@ xset +dpms
 xset s blank
 xset s on
 xset dpms force off
+xset dpms 0 0 0 60
 slock
-exit 0    
+exit 0  
