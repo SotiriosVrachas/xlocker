@@ -1,6 +1,6 @@
 #!/bin/bash
 # A bash script that loop through every display looking for a fullscreen window. If a window is in fullscreen state xtrlock is executed, else slock is executed.
-# Copyright (C) 2013  Sotirios Vrachas
+# Copyright (C) 2013  Sotirios Vrachas <sotiri@vrachas.net>
 
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
