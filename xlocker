@@ -1,21 +1,21 @@
 #!/bin/bash
-#    A bash script that loop through every display looking for a fullscreen window. If a window is in fullscreen state xtrlock is executed, else slock is executed.
-#    Copyright (C) 2013  Sotirios Vrachas
+# A bash script that loop through every display looking for a fullscreen window. If a window is in fullscreen state xtrlock is executed, else slock is executed.
+# Copyright (C) 2013  Sotirios Vrachas
 
-#    This program is free software: you can redistribute it and/or modify
-#    it under the terms of the GNU General Public License as published by
-#    the Free Software Foundation, either version 3 of the License, or
-#    (at your option) any later version.
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
 
-#    This program is distributed in the hope that it will be useful,
-#    but WITHOUT ANY WARRANTY; without even the implied warranty of
-#    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-#    GNU General Public License for more details.
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
 
-#    You should have received a copy of the GNU General Public License
-#    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+# You should have received a copy of the GNU General Public License
+# along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-#    Inspired from https://github.com/iye/lightsOn
+# Inspired from https://github.com/iye/lightsOn
 
 displays=""
 while read id
@@ -28,7 +28,6 @@ for display in $displays
 do
     #get id of active window and clean output
     activ_win_id=`DISPLAY=:0.${display} xprop -root _NET_ACTIVE_WINDOW`
-    #activ_win_id=${activ_win_id#*# } #gives error if xprop returns extra ", 0x0" (happens on some distros)
     activ_win_id=${activ_win_id:40:9}        
     # Check if Active Window (the foremost window) is in fullscreen state
     isActivWinFullscreen=`DISPLAY=:0.${display} xprop -id $activ_win_id _NET_WM_STATE | grep _NET_WM_STATE_FULLSCREEN`
