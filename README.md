@@ -28,7 +28,7 @@ alias slock='xset dpms force off; slock'
 alias xtrlock='xset -dpms; xset s off; xtrlock; xset +dpms; xset s on'
 ```
 # Where to get help
-You can create a new (issue)[https://github.com/SotiriosVrachas/xlocker/issues]
+You can create a new [issue](https://github.com/SotiriosVrachas/xlocker/issues)
 
 # Contribution guidelines
 Feel free to contribute in any way you want. I yould like to know if you hahe any problem, or not.
